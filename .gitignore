@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BankApp/obj/Debug
+/BankApp/bin/Debug
+/.vs/BankApp/v15/Server/sqlite3
