@@ -35,7 +35,7 @@ namespace BankApp
         {
             var account = accounts.Where(a => a.AccountNumber == accountNumber).FirstOrDefault();
             if (account == null)
-                return;
+                return null;
 
             return account;
         }

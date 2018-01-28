@@ -27,12 +27,12 @@ namespace BankApp
             while (true)
             { 
                 Console.WriteLine("0:Exit");
-                Console.WriteLine("1:Create anew account");
+                Console.WriteLine("1:Create a new account");
                 Console.WriteLine("2:Deposit");
                 Console.WriteLine("3:Withdrawal");
                 Console.WriteLine("4:Print all accounts");
 
-                Console.Write("Select an option");
+                Console.Write("Select an option ");
                 var option = Console.ReadLine();
                 switch (option)
                 {
@@ -43,11 +43,11 @@ namespace BankApp
                         Console.WriteLine("Email Address");
                         var emailAddress = Console.ReadLine();
                         var accountTypes = Enum.GetNames(typeof(AccountType));
-                        for (int i = 0; int < accountTypes.Length; i++)
+                        for (int i = 0; i < accountTypes.Length; i++)
                         {
                             Console.WriteLine($"{i + 1}.{accountTypes[i]}");
                         }
-                        Console.Write("Select an account type:");
+                        Console.Write("Select an account type: ");
                         var accountType = Convert.ToInt32(Console.ReadLine());
                         Console.Write("Deposit:");
                         var amount = Convert.ToDecimal(Console.ReadLine());
@@ -56,17 +56,17 @@ namespace BankApp
                         break;
                     case "2":
                         PrintAllAccounts();
-                        Console.Write("Seleact an account nunber:");
+                        Console.Write("Select an account number: ");
                         var accountNumber = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("Deposit amount:");
+                        Console.Write("Deposit amount: ");
                         var depositAmount = Convert.ToDecimal(Console.ReadLine());
                         Bank.Deposit(accountNumber, depositAmount);
                         break;
                     case "3":
                         PrintAllAccounts();
-                        Console.Write("Seleact an account nunber:");
+                        Console.Write("Select an account number: ");
                         var acntNumber = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("Deposit amount:");
+                        Console.Write("Withdraw amount: ");
                         var withdrawAmount = Convert.ToDecimal(Console.ReadLine());
                         Bank.Deposit(acntNumber, withdrawAmount);
                         break;
